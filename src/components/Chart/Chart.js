@@ -78,6 +78,7 @@ function Chart({data:{confirmed, recovered, deaths}, country}) {
             :null
     );
 
+    //if country is available render BarChart else render Linechart
     return (
         <div className={styles.container}>
             {country ? BarChart : LineChart}
