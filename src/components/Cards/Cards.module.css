@@ -23,3 +23,15 @@
       margin: 2% 0 !important;
     }
   }
+
+.blue{
+    color: blue !important;
+}
+
+.green{
+    color: rgb(7, 211, 7) !important;
+}
+
+.red{
+    color: red !important;
+}
