@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(250, 250, 250);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.container {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+.image{
+  margin-top: 20px !important;
+  width:370px !important;
+  
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+      margin: 0 10%;
+    }
+  
+    .image {
+      width: 100%;
+    }
+  }
