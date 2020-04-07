@@ -35,3 +35,11 @@
 .red{
     color: red !important;
 }
+
+.title{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Montserart';
+    
+    margin-bottom: 60px !important;
+}
