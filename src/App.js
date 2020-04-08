@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import {Cards, Chart, CountryPicker} from './components';
 import {fetchData} from './api/api';
+import {ThemeProvider } from '@material-ui/core/styles';
 
 import styles from './App.module.css'
 
@@ -33,6 +34,8 @@ class App extends Component {
         //setting state
         //passing the fetchedData to state object 
         this.setState({data: fetchedData});
+
+        
     }
 
     render() {
@@ -40,10 +43,12 @@ class App extends Component {
         return (
             <div className={styles.container}>
                 <img className={styles.image} alt='covid19-logo' src={cimg} />
-                <Cards data={data} country={country}/>
-                <CountryPicker handleCountryChange={this.handleCountryChange} />
-                <Chart data={data} country={country} />
-                
+                <ThemeProvider>
+                    <Cards data={data} country={country}/>
+                    <CountryPicker handleCountryChange={this.handleCountryChange} />
+                    <Chart data={data} country={country} />
+                    
+                </ThemeProvider>
             </div>
         )
     }

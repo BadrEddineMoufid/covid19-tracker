@@ -51,6 +51,12 @@ function Chart({data:{confirmed, recovered, deaths}, country}) {
         : null
     )
 
+    // const LinChart2 = (
+    //     <Line 
+    //         data={{}}
+    //     />
+    // )
+
 
     const BarChart = (
         confirmed 

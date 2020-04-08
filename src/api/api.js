@@ -40,6 +40,7 @@ export const fetchDailyData = async () => {
         }));
 
         
+        
 
         return result;
     } catch (error) {
@@ -60,3 +61,5 @@ export const fetchCountries = async ()=>{
         console.error("API component /fetchCountries method" + error);
     }
 }
+
+
