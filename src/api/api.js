@@ -3,7 +3,7 @@ import axios from 'axios';
 //this the API url from where im getting all covid19 data
 const url = 'https://covid19.mathdro.id/api';
 
-//fetching the basic data infected, recovered, deaths.....
+//fetching the basic data i mean the global data: infected, recovered, deaths.....
 export const fetchData = async (country)=>{
     //hhhhh running out of names
     let dynamicUrl = url;
@@ -33,11 +33,13 @@ export const fetchDailyData = async () => {
         const {data} = await axios.get(`${url}/daily`)
 
         //destructuring data object and returning a new array whith the needed data for Chart Component
-        const result = data.map((dailyData)=>({
-            confirmed: dailyData.confirmed.total,
-            deaths: dailyData.deaths.total,
-            date: dailyData.reportDate
-        }));
+        const result = data.map((dailyData)=>(
+            {
+                confirmed: dailyData.confirmed.total,
+                deaths: dailyData.deaths.total,
+                date: dailyData.reportDate
+            })
+        );
 
         
         
